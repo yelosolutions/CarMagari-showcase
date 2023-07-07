@@ -11,7 +11,7 @@ const Hero = () => {
         <div className='hero'>
             <div className="flex-1 pt-36 padding-x">
                 <h1 className="hero__title">
-                    Discover, reserve and drive a car in no time, hassle-free!
+                    Discover, reserve and rent a car in no time, hassle-free!
                 </h1>
                 <p className="hero__subtitle">
                     Your car rental experience made effortless. Book with ease and hit the road.
