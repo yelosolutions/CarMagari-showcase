@@ -20,10 +20,9 @@ const Hero = () => {
                         fill
                         className='object-contain'
                     />
-                    {/* <div className='hero__image-overlay'/> */}
                 </div>
             </div>
-            <div className="flex-1 pt-36 padding-x">
+            <div className="flex-1 pt-36 padding-x mb-3">
                 <h1 className="hero__title">
                     Discover, book or rent a car in no time, hassle-free!
                 </h1>
