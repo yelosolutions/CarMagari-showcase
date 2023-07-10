@@ -72,7 +72,21 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerP
                   className={({ active }) => `relative search-manufacturer__option ${active ? 'bg-indigo-400 text-white': 'text-gray-900'}`
                   }
                 >
-                  {item}
+                  {({ selected, active }) => (
+                    <>
+                      <span
+                        className={`block truncate ${selected? 'font-medium': 'font-normal'}`}
+                      >
+                        {item}
+                      </span>
+                      {selected ? (
+                        <span
+                          className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white': 'text-gray-900'}`}
+                        ></span>)
+                        : 
+                        null}
+                    </>
+                  )}
                 </Combobox.Option>
               ))
             ) }
@@ -81,7 +95,7 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerP
         </Transition>
       </Combobox>
     </div>
-  )
-}
+  );
+};
 
 export default SearchManufacturer;
