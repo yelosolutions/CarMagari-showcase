@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <main className="overflow-hidden bg-indigo-50">
       <Hero/>
-      <div className='mt-12 padding-x padding-y'>
+      <div className='mt-12 padding-x padding-y max-width'>
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Car Listing</h1>
-          <p></p>
+          <p>Search your favorite car in the catalogue</p>
         </div>
         <div className="home__filters">
           <SearchBar/>
