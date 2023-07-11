@@ -2,9 +2,10 @@ import Image from 'next/image';
 import { Hero, CustomFilter, SearchBar, CarCard } from '@/components';
 import { fetchCars } from '@/utils';
 
+
+//
 export default async function Home() {
   const allCars = await fetchCars();
-  
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars; 
 
   return (
@@ -24,12 +25,14 @@ export default async function Home() {
         </div>
         {!isDataEmpty ? (
           <section>
-            <h2>We have Cars</h2>
-            {/* {allCars.map((car) => <CarCard car={car}/>)} */}
+            <div className='home__cars-wrapper'>
+              {allCars.map((car) => <CarCard car={car}/>)}
+            </div>
+            
           </section>
         ) : (
-          <div>
-            <h2>No results</h2>
+          <div className='home__error-container'>
+            <h2 className='text-black text-xl font-bold'>Oops, no results</h2>
           </div>
         )}
       
