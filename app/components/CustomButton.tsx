@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { CustomButtonProps } from '@/types';
+import Image from 'next/image';
 
-const CustomButton = ({title, containerStyles, handleClick, btnType} : CustomButtonProps) => {
+const CustomButton = ({title, containerStyles, handleClick, btnType, titleStyles, rightIcon} : CustomButtonProps) => {
   return (
     <button
         disabled={false}
@@ -11,9 +12,21 @@ const CustomButton = ({title, containerStyles, handleClick, btnType} : CustomBut
         className={`custom-btn ${containerStyles}`}
         onClick={handleClick}
     > 
-      <span>
+      <span className={titleStyles}>
         {title}
       </span>
+      {rightIcon && (
+        <div className='relative'>
+          <Image
+            src={rightIcon}
+            width={6}
+            height={6}
+            className='object-contain'
+            alt='right arrow'
+          />
+        </div>)
+      }
+
     </button>
   );
 };
