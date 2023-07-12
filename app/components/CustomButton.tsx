@@ -12,21 +12,19 @@ const CustomButton = ({title, containerStyles, handleClick, btnType, titleStyles
         className={`custom-btn ${containerStyles}`}
         onClick={handleClick}
     > 
-      <span className={titleStyles}>
+      <span className={`flex-1 ${titleStyles}`}>
         {title}
       </span>
       {rightIcon && (
-        <div className='relative'>
+        <div className='relative w-6 h-6'>
           <Image
             src={rightIcon}
-            width={6}
-            height={6}
+            fill
             className='object-contain'
             alt='right arrow'
           />
         </div>)
       }
-
     </button>
   );
 };
