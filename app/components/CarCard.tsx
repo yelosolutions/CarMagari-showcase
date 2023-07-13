@@ -96,6 +96,7 @@ const CarCard = ({car}: CarCardProps) => {
             titleStyles='text-white text-[14px] font-bold leading-[17px]'
             btnType='button'
             rightIcon='/right-arrow.svg'
+            handleClick={() => setIsOpen(true)}
           />
         </div>
       </div>
