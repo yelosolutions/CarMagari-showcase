@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { footerLinks } from '@/constants'
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { footerLinks } from '@/constants';
 
 const Footer = () => {
   return (
@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
 
       <div className='footer__copyrights'>
-        <p>By YeloSolutions, made with ❤️ and ☕ </p>
+        <p>By YeloSolutions, made with ☕ and ❤️ </p>
 
         <div className="footer__copyrights-link">
           <Link href="/" className="text-gray-500">

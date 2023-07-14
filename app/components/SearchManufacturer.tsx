@@ -22,7 +22,7 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerP
   
   return (
     <div className="search-manufacturer">
-      {/* Combobox - autocomplete search*/}
+      {/* Combobox - autocomplete search(headlessUI)*/}
       <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className='relative w-full '>
           {/* a Combobox button - click svg icon to display list*/}
